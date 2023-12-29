@@ -1,6 +1,9 @@
+# Solution is O(n) time complexity because you might have to iterate through
+# the entire input array, and O(n) space complexity because you need to
+# create a set to store array elements
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        # Create a set of seen integers (O(1) lookup)
+        # Create a set of seen numbers
         seen = set()
 
         # Iterate through nums array and check if each element has been seen
@@ -10,7 +13,7 @@ class Solution:
             if num in seen:
                 return True
 
-            # Else add the element to the set of seen integers
+            # Else add the element to the set of seen numbers
             else:
                 seen.add(num)
 
