@@ -10,7 +10,7 @@ class Solution:
         left, right = 0, len(height) - 1
 
         while left < right:
-            # Calculate the area of the current pointer elements (1-indexing)
+            # Calculate the area of the current pointer elements
             area = (right - left) * min(height[left], height[right])
 
             # Update the maximum area
