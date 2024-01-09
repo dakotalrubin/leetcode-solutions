@@ -18,22 +18,22 @@ class Solution:
                 # If maxLeft is taller, decrement the right pointer
                 right -= 1
 
-                # Update the max right pointer element seen so far
-                maxRight = max(maxRight, height[right])
-
                 # Calculate the amount of water that can be trapped here
                 water = min(maxLeft, maxRight) - height[right]
+
+                # Update the max right pointer element seen so far
+                maxRight = max(maxRight, height[right])
 
             else:
                 # Else if maxRight is taller or equal to maxLeft, increment
                 # the left pointer
                 left += 1
 
-                # Update the max left pointer element seen so far
-                maxLeft = max(maxLeft, height[left])
-
                 # Calculate the amount of water that can be trapped here
                 water = min(maxLeft, maxRight) - height[left]
+
+                # Update the max left pointer element seen so far
+                maxLeft = max(maxLeft, height[left])
 
             # Only add positive amounts of water to the total
             if water > 0:
