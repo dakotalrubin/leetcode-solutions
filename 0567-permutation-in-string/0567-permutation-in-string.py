@@ -39,8 +39,7 @@ class Solution:
                 return True
 
             # Remove the leftmost char in the current window from s2Count
-            if s2[left] in s2Count:
-                s2Count[s2[left]] -= 1
+            s2Count[s2[left]] -= 1
             if s2Count[s2[left]] == 0:
                 s2Count.pop(s2[left])
 
