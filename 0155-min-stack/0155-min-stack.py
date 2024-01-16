@@ -14,7 +14,7 @@ class MinStack:
         # If minStack is empty, push the value onto minStack
         if not self.minStack:
             self.minStack.append(val)
-        # If minStack isn't empty, push the mimumum value
+        # If minStack isn't empty, push the minimum value
         # (the current minimum value vs. the new value being pushed)
         else:
             val = min(val, self.minStack[-1])
