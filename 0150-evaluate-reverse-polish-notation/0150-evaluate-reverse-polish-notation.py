@@ -27,5 +27,5 @@ class Solution:
                 # Push an expression onto the stack
                 stack.append(int(token))
 
-        # Return the evaulated expression
+        # Return the evaluated expression
         return stack.pop()
